@@ -1,7 +1,25 @@
 import express from "express";
+import "./models/Task.js";
+import { db } from "./database/database";
+import indexRoute from "./routes/index";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 
-app.listen(3000, () => {
-  console.log("server listen on port", 3000);
-});
+app.use(express.json());
+app.use(indexRoute);
+
+async function main() {
+  try {
+    await db.sync({ force: true });
+
+    app.listen(process.env.DATABASE_PORT, () => {
+      console.log("server listen on port", process.env.DATABASE_PORT);
+    });
+  } catch (error) {}
+}
+
+main();
+
+export default app;

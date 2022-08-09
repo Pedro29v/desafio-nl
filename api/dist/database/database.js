@@ -2,8 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.db = void 0;
 const sequelize_1 = require("sequelize");
-exports.db = new sequelize_1.Sequelize(process.env.DATABASE_NAME, process.env.DATABASE_USER, process.env.DATABASE_PASS, {
-    dialect: "postgres",
+console.log(process.env.DATABASE_HOST);
+exports.db = new sequelize_1.Sequelize("challenge_nl", "postgres", "24892165", {
     host: process.env.DATABASE_HOST,
-    port: process.env.DATABASE_PORT,
+    dialect: "postgres",
+    logging: false,
 });
