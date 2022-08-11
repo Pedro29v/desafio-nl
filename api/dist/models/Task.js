@@ -13,11 +13,6 @@ exports.taskModel = database_1.db.define("Task", {
         type: sequelize_1.DataTypes.STRING,
         allowNull: false,
     },
-    done: {
-        type: sequelize_1.DataTypes.BOOLEAN,
-        allowNull: false,
-        defaultValue: false,
-    },
     priority: {
         type: sequelize_1.DataTypes.STRING,
         allowNull: false,

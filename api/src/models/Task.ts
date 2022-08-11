@@ -13,11 +13,6 @@ export const taskModel = db.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    done: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      defaultValue: false,
-    },
     priority: {
       type: DataTypes.STRING,
       allowNull: false,

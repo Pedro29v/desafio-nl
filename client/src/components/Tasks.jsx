@@ -61,11 +61,11 @@ function Tasks() {
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Example Modal"
-        className="bg-back h-[5rem] w-[35rem] m-auto rounded-md text-white"
+        className="bg-back h-auto pb-2 lg:h-[5rem] lg:w-[35rem] lg:m-auto rounded-md text-white"
       >
-        <form className="text-center  ">
-          <div className="flex justify-around mt-[10rem]  ">
-            <div>
+        <form className="text-center">
+          <div className="flex flex-col w-full lg:flex-row  pr-[7rem] lg:pr-[1rem] lg:justify-around mt-[10rem]  ">
+            <div className="m-auto ">
               <p className="mt-2 font-bold"> New task</p>
               <input
                 name="name"
@@ -92,7 +92,7 @@ function Tasks() {
               <button
                 type="button"
                 className="w-[5rem] p-1 rounded-md bg-button text-white mt-8 hover:bg-secondary
-                hover:shadow-md hover:shadow-black transition-all duration-500 ease-in-out  "
+                hover:shadow-md hover:shadow-black transition-all duration-500 ease-in-out lg:ml-[3rem] "
                 onClick={handleSubmit}
               >
                 Send
