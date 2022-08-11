@@ -4,10 +4,12 @@ import { db } from "./database/database";
 import indexRoute from "./routes/index";
 import dotenv from "dotenv";
 dotenv.config();
+var cors = require("cors");
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 app.use(indexRoute);
 
 async function main() {

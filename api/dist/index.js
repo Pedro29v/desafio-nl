@@ -18,8 +18,10 @@ const database_1 = require("./database/database");
 const index_1 = __importDefault(require("./routes/index"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
+var cors = require("cors");
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
+app.use(cors());
 app.use(index_1.default);
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
