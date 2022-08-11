@@ -37,7 +37,7 @@ function Form() {
             <input
               name="name"
               type="text"
-              className="w-[15rem] rounded-lg  p-1 outline-none text-black "
+              className="w-[15rem] rounded-lg  p-1 outline-none text-black bg-slate-200 "
               onChange={handleChange}
             />
           </div>
@@ -45,7 +45,7 @@ function Form() {
             <p className="mt-2 font-bold ">Priority</p>
             <select
               name="priority"
-              className="w-[5rem] rounded-lg  p-1 outline-none text-black "
+              className="w-[5rem] rounded-lg  p-1 outline-none text-black bg-slate-200"
               defaultValue="Low"
               onChange={handleChange}
             >

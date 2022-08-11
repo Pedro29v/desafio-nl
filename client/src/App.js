@@ -5,7 +5,7 @@ import Home from "./components/Home.jsx";
 
 function App() {
   return (
-    <div className="App ">
+    <div className="App bg-back h-[100vh] ">
       <Routes>
         <Route path="/" exact element={<Home />} />
       </Routes>
